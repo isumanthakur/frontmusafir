@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import apiService from "@/app/services/apiService";
 import CommunitySidebar from "./CommunitySidebar";
-import StoryModal from "./Storymodal";
+import StoryModal from "./StoryModal";
 import {
   IconThumbUp,
   IconFileOrientation,
