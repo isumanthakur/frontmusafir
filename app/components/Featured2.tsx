@@ -12,7 +12,7 @@ const HeroSections: React.FC = () => {
                         className="w-[400px] h-[600px] rounded-3xl shadow-2xl object-cover"
                         autoPlay
                         loop
-                        src="/social.mp4" 
+                        src="/social-2.mp4" 
                         poster="vid"
                     >
                         Your browser does not support the video tag.
