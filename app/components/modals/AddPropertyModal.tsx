@@ -151,7 +151,7 @@ const AddPropertyModal = () => {
 
                     <div className='pt-3 pb-6 space-y-4'>
                         <div className='flex flex-col space-y-2'>
-                            <label>Price per night</label>
+                            <label>Cost per seat</label>
                             <input
                                 type="number"
                                 value={dataPrice}
@@ -161,7 +161,7 @@ const AddPropertyModal = () => {
                         </div>
 
                         <div className='flex flex-col space-y-2'>
-                            <label>Bedrooms</label>
+                            <label>Total Boats</label>
                             <input
                                 type="number"
                                 value={dataBedrooms}
@@ -171,7 +171,7 @@ const AddPropertyModal = () => {
                         </div>
 
                         <div className='flex flex-col space-y-2'>
-                            <label>Bathrooms</label>
+                            <label>number of site seeing stops</label>
                             <input
                                 type="number"
                                 value={dataBathrooms}
@@ -181,7 +181,7 @@ const AddPropertyModal = () => {
                         </div>
 
                         <div className='flex flex-col space-y-2'>
-                            <label>Maximum number of guests</label>
+                            <label> maximum seats</label>
                             <input
                                 type="number"
                                 value={dataGuests}

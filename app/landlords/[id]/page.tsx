@@ -6,7 +6,7 @@ import { getUserId } from "@/app/lib/actions";
 const LandlordDetailPage = async ({ params }: { params: { id: string }}) => {
     // Replace this with your actual API call when ready
     const landlord = {
-        avatar_url: "/me.jpg", // Use the placeholder image you have
+        avatar_url: "/3.jpg", // Use the placeholder image you have
         name: "Suman Thakur",
         email: "sumam.thakur.work01@gmail.com",
         phone_number: "8240609670",
@@ -15,15 +15,15 @@ const LandlordDetailPage = async ({ params }: { params: { id: string }}) => {
     const userId = await getUserId();
 
     return (
-        <main className="p-4 sm:p-10 md:p-20 font-sans pt-6">
+        <main className="p-4 sm:p-10 md:p-20 font-sans pt-6 overflow-x-hidden max-w-full">
             <div className="flex flex-col md:flex-row gap-8 md:gap-36">
-                <aside className="mb-4 font-semibold h-auto md:h-5/6 border px-6 py-8 md:px-10 md:py-[100px] shadow-md rounded-3xl">
+                <aside className="mb-4 font-semibold h-auto md:h-5/6 border px-6 py-8 md:px-10 md:py-[100px] shadow-md rounded-3xl flex-shrink-0 min-w-[200px] md:min-w-[300px]">
                     <Image
                         src={landlord.avatar_url}
                         width={150}
                         height={150}
                         alt={landlord.name}
-                        className="rounded-full mx-auto md:mx-0"
+                        className="rounded-full flex self-center mx-auto md:mx-0"
                     />
 
                     <h1 className="mt-4 md:mt-6 py-2 md:py-3 font-semibold text-xl md:text-2xl text-center md:text-left">{landlord.name}</h1>
@@ -41,7 +41,7 @@ const LandlordDetailPage = async ({ params }: { params: { id: string }}) => {
                     )}
                 </aside>
 
-                <div className="flex-1">
+                <div className="flex-1 max-w-full">
                     <div className="flex flex-col md:flex-row justify-between items-center md:items-start">
                         <div className="text-center md:text-left">
                             <h1 className="mb-3 mt-4 md:mt-10 font-sans font-semibold text-2xl md:text-4xl">Properties Listed By Owner</h1>

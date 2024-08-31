@@ -87,7 +87,7 @@ const ConversationDetail: React.FC<ConversationDetailProps> = ({
                 {messages.map((message, index) => (
                     <div
                         key={index}
-                        className={`py-3 px-16 rounded-3xl ${message.created_by.id === myUser?.id ? 'self-end bg-emerald-500' : 'self-start bg-gray-200'}`}
+                        className={`py-3 px-16 rounded-3xl ${message.created_by.id === myUser?.id ? 'self-end bg-teal-400' : 'self-start bg-gray-200'}`}
                     >
                         <p className="font-bold font-sans text-gray-500">{message.created_by.name}</p>
                         <p>{message.body}</p>
@@ -97,7 +97,7 @@ const ConversationDetail: React.FC<ConversationDetailProps> = ({
                 {realtimeMessages.map((message, index) => (
                     <div
                         key={index}
-                        className={`py-3 px-16 rounded-3xl ${message.name === myUser?.name ? 'self-end bg-emerald-500' : 'self-start bg-gray-200'}`}
+                        className={`py-3 px-16 rounded-3xl ${message.name === myUser?.name ? 'self-end bg-teal-400' : 'self-start bg-gray-200'}`}
                     >
                         <p className="font-bold font-sans text-gray-500">{message.name}</p>
                         <p>{message.body}</p>

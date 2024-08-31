@@ -2,13 +2,13 @@ import React from 'react';
 
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-gray-100 text-gray-400 rounded-t-3xl font-sans font-semibold text-sm py-10">
+        <footer className="bg-gray-50 text-gray-400 rounded-t-3xl font-sans font-bold text-sm py-10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row justify-between items-center">
                     {/* Logo and Tagline */}
                     <div className="md:w-1/3 mb-6 md:mb-0 text-center md:text-left">
-                        <h2 className="text-2xl font-bold text-black">Musafir</h2>
-                        <p className="mt-2 text-gray-400">Explore the world with us.</p>
+                        <h2 className="text-2xl font-bold text-teal-500">Musafir</h2>
+                        <p className="mt-2 text-teal-500">Explore the ocean with us.</p>
                     </div>
 
                     {/* Navigation Sections */}
@@ -17,15 +17,15 @@ const Footer: React.FC = () => {
                             <h3 className="text-lg font-semibold text-black">Explore</h3>
                             <ul className="mt-4 space-y-2">
                                 <li><a href="#" className="hover:text-white">Overview</a></li>
-                                <li><a href="#" className="hover:text-white">Superpowers</a></li>
-                                <li><a href="#" className="hover:text-white">Brushes</a></li>
-                                <li><a href="#" className="hover:text-white">Color</a></li>
+                                <li><a href="#" className="hover:text-white">About</a></li>
+                                <li><a href="#" className="hover:text-white">Contact</a></li>
+                                <li><a href="#" className="hover:text-white">Book</a></li>
                             </ul>
                         </div>
                         <div className="w-1/2 md:w-auto">
                             <h3 className="text-lg font-semibold text-black">Company</h3>
                             <ul className="mt-4 space-y-2">
-                                <li><a href="#" className="hover:text-white">Who we are</a></li>
+                                <li><a href="#" className="hover:text-white">values</a></li>
                                 <li><a href="#" className="hover:text-white">Press</a></li>
                                 <li><a href="#" className="hover:text-white">Careers</a></li>
                                 <li><a href="#" className="hover:text-white">Brand use</a></li>

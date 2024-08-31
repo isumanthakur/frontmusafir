@@ -14,7 +14,7 @@ const MyReservationsPage = async () => {
                 <div>
                     <h1 className="mb-3 mt-10 font-sans font-semibold text-4xl">My reservations</h1>
                     <div className="flex flex-row">
-                        <button className="border border-emerald-500 text-xs px-1 rounded-md font-sans font-semibold text-emerald-500">properties</button>
+                        <button className="border border-emerald-500 text-xs px-1 rounded-md font-sans font-semibold text-emerald-500">services</button>
                         <p className="text-xs font-sans px-5"></p>
                     </div>
                 </div>
@@ -52,7 +52,7 @@ const MyReservationsPage = async () => {
                                 <div>
                                     <Link
                                         href={`/properties/${reservation.property.id}`}
-                                        className="py-2 px-4 bg-emerald-500 text-white rounded-md hover:bg-emerald-500 transition"
+                                        className="py-2 px-4 bg-teal-400 text-white rounded-md hover:bg-teal-400 transition"
                                     >
                                         Go 
                                     </Link>

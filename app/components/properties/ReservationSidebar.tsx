@@ -233,7 +233,7 @@ const ReservationSidebar: React.FC<ReservationSidebarProps> = ({
 
     return (
         <aside className="mt-6 p-6 col-span-2 rounded-3xl border-2 shadow-sm font-sans border-gray-100 ">
-            <h2 className="mb-5 text-2xl font-sans">₹{property.price_per_night} per night</h2>
+            <h2 className="mb-5 text-2xl font-sem font-sans">₹{property.price_per_night} per person</h2>
 
             <DatePicker
             
@@ -254,12 +254,12 @@ const ReservationSidebar: React.FC<ReservationSidebarProps> = ({
                 </select>
             </div>
 
-            <div onClick={performBooking} className="w-full mb-6 py-2 text-center text-white bg-emerald-500 hover:bg-emerald-600 rounded-xl">
+            <div onClick={performBooking} className="w-full mb-6 py-2 text-center text-white bg-teal-400 hover:bg-teal-600  rounded-xl">
                 Book
             </div>
 
             <div className="mb-4 font-medium text-sm flex justify-between align-center">
-                <p>₹{property.price_per_night} * {nights} nights</p>
+                <p>₹{property.price_per_night} * {nights} trip</p>
                 <p>₹{property.price_per_night * nights}</p>
             </div>
 

@@ -83,12 +83,12 @@ const PropertyList: React.FC<PropertyListProps> = ({
     const secondRowProperties = properties.slice(Math.ceil(properties.length / 2));
 
     return (
-        <div className="flex flex-col md:gap-4 p-5 md:px-20 justify-center  w-full">
+        <div className="flex flex-col md:gap-4  md:px-36 justify-center  w-full">
             <div 
                 ref={scrollContainerRef} 
-                className="flex flex-col gap-4 overflow-x-auto scrollbar-hide">
+                className="flex flex-col gap-8 md:gap-16 overflow-x-auto scrollbar-hide">
                 
-                <div className="flex gap-0 md:gap-20 w-max">
+                <div className="flex md:gap-16 w-max">
                     {firstRowProperties.map((property, index) => (
                         <div 
                             key={`${property.id}-${index}`} 
@@ -101,7 +101,7 @@ const PropertyList: React.FC<PropertyListProps> = ({
                     ))}
                 </div>
 
-                <div className="flex gap-0 md:gap-20 w-max">
+                <div className="flex gap-0 md:gap-16 w-max">
                     {secondRowProperties.map((property, index) => (
                         <div 
                             key={`${property.id}-${index}`} 

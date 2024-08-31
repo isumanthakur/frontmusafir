@@ -48,7 +48,7 @@ const UserNav: React.FC<UserNavProps> = ({
                             />
 
                             <MenuLink
-                                label='My properties'
+                                label='My services'
                                 onClick={() => {
                                     setIsOpen(false);
                                     router.push('/myproperties');

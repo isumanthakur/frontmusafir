@@ -22,9 +22,9 @@ const MyPropertiesPage = async () => {
 
             <div className="flex flex-row justify-between">
                 <div>
-                    <h1 className="mb-3 mt-10 font-sans font-semibold text-4xl">My properties</h1>
+                    <h1 className="mb-3 mt-10 font-sans font-semibold text-4xl">My Services</h1>
                     <div className="flex flex-row">
-                        <button className="border border-emerald-500 text-xs px-1 rounded-md font-sans font-semibold text-emerald-500">properties</button>
+                        <button className="border border-emerald-500 text-xs px-1 rounded-md font-sans font-semibold text-emerald-500">boats</button>
                         <p className="text-xs font-sans px-5"></p>
                     </div>
                 </div>

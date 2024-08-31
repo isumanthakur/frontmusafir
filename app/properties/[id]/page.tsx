@@ -11,6 +11,8 @@ import {
     IconUserCheck,
     IconBath,
     IconCarambola,
+    IconShip,
+    IconBuildingLighthouse
 } from "@tabler/icons-react";
 
 type Review = {
@@ -84,7 +86,7 @@ const ReviewSection: React.FC<ReviewSectionProps> = ({
                     )}
                     <button
                         onClick={handleSubmitReview}
-                        className="w-full bg-emerald-500 text-white py-2 rounded-3xl shadow-md hover:bg-red-700 transition duration-300"
+                        className="w-full bg-teal-400 text-white py-2 rounded-3xl shadow-md hover:bg-teal-700 transition duration-300"
                     >
                         Submit Review
                     </button>
@@ -252,8 +254,8 @@ const PropertyDetailPage = ({ params }: { params: Params }) => {
 
                         <span className="mb-6 flex gap-3 flex-row font-sans text-sm font-semibold text-gray-600">
                             {property.guests}<IconUserCheck className=" h-6 w-6 flex-shrink-0" />   
-                            {property.bedrooms} <IconHotelService className=" h-6 w-6 flex-shrink-0" />   
-                            {property.bathrooms} <IconBath className=" h-6 w-6 flex-shrink-0" />  
+                            {property.bedrooms} <IconShip className=" h-6 w-6 flex-shrink-0" />   
+                            {property.bathrooms} <IconBuildingLighthouse className=" h-6 w-6 flex-shrink-0" />  
                         </span>
 
                         <hr />

@@ -11,11 +11,15 @@ interface SelectStateCityProps {
 }
 
 const statesAndCities: Record<string, string[]> = {
-    Maharashtra: ['Mumbai', 'Pune', 'Nagpur'],
-    Karnataka: ['Bengaluru', 'Mysuru', 'Hubli'],
-    TamilNadu: ['Chennai', 'Coimbatore', 'Madurai'],
-    Delhi: ['New Delhi'],
-    Gujarat: ['Ahmedabad', 'Surat', 'Vadodara'],
+    Maharashtra: ['Mumbai', 'Pune', 'Nagpur', 'Ratnagiri', 'Alibaug'],
+    Karnataka: ['Mangaluru', 'Karwar', 'Udupi'],
+    TamilNadu: ['Chennai', 'Kanyakumari', 'Rameswaram'],
+    Goa: ['Panaji', 'Vasco da Gama', 'Margao'],
+    Kerala: ['Kochi', 'Kozhikode', 'Alappuzha'],
+    AndhraPradesh: ['Visakhapatnam', 'Vijayawada', 'Kakinada'],
+    Gujarat: ['Ahmedabad', 'Surat', 'Vadodara', 'Dwarka', 'Porbandar'],
+    Odisha: ['Puri', 'Paradip', 'Gopalpur'],
+    WestBengal: ['Kolkata', 'Digha', 'Haldia'],
 };
 
 const SelectStateCity: React.FC<SelectStateCityProps> = ({ value, onChange }) => {

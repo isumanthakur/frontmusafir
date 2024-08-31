@@ -37,12 +37,12 @@ const PropertyListItems: React.FC<PropertyProps> = ({
                 )}
             </div>
 
-            <div className="mt-2">
+            <div className="mt-2 text-center"> {/* Add text-center class here */}
                 <p className="text-lg font-sans text-neutral-600 font-semibold">{property.title}</p>
             </div>
 
-            <div className="mt-2">
-                <p className="text-sm text-neutral-400"><strong>₹{property.price_per_night}</strong> per night</p>
+            <div className="mt-2 text-center"> {/* Add text-center class here */}
+                <p className="text-sm text-neutral-400"><strong>₹{property.price_per_night}</strong> per person</p>
             </div>
         </div>
     );

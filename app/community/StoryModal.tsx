@@ -15,8 +15,18 @@ const StoryModal: React.FC<StoryModalProps> = ({ videoUrl, onClose }) => {
     };
   }, [onClose]);
 
+  const handleOverlayClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    const videoElement = document.getElementById("story-video");
+    if (videoElement && !videoElement.contains(event.target as Node)) {
+      onClose();
+    }
+  };
+
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+    <div
+      className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+      onClick={handleOverlayClick}
+    >
       <div className="relative w-3/4 h-3/4">
         <video
           id="story-video"
@@ -24,12 +34,6 @@ const StoryModal: React.FC<StoryModalProps> = ({ videoUrl, onClose }) => {
           autoPlay
           className="w-full h-full rounded"
         />
-        <button
-          onClick={onClose}
-          className="absolute top-2 right-2 text-white bg-black bg-opacity-50 rounded-full p-2"
-        >
-          X
-        </button>
       </div>
     </div>
   );

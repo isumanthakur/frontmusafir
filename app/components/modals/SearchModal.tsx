@@ -140,30 +140,6 @@ const SearchModal = () => {
                         className="w-full h-14 px-4 border border-gray-300 rounded-xl"
                     />
                 </div>
-
-                <div className="space-y-4  font-sans font-semibold">
-                    <label className=" font-sans font-semibold">Number of bedrooms:</label>
-                    <input 
-                        type="number" 
-                        min="1" 
-                        value={numBedrooms} 
-                        placeholder="Number of bedrooms..."
-                        onChange={(e) => setNumBedrooms(e.target.value)} 
-                        className="w-full h-14 px-4 border border-gray-300 rounded-xl"
-                    />
-                </div>
-
-                <div className="space-y-4  font-sans font-semibold">
-                    <label>Number of bathrooms:</label>
-                    <input 
-                        type="number" 
-                        min="1" 
-                        value={numBathrooms} 
-                        placeholder="Number of bathrooms..."
-                        onChange={(e) => setNumBathrooms(e.target.value)} 
-                        className="w-full h-14 px-4 border border-gray-300 rounded-xl"
-                    />
-                </div>
             </div>
 
             <div className="mt-6 flex flex-row gap-4">
