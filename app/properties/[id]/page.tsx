@@ -240,8 +240,8 @@ const PropertyDetailPage = ({ params }: { params: Params }) => {
     return (
         <main className=" mx-auto px-4 md:px-28 py-10">
             <div className="w-full h-[40vh] md:h-[64vh] mb-4 overflow-hidden rounded-3xl relative">
-                <Image
-                    fill
+                <img
+                   
                     src={property.image_url}
                     className="object-cover w-full h-full"
                     alt="Property image"
