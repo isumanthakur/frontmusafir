@@ -7,16 +7,19 @@ const HeroSection: React.FC = () => {
             <div className="w-full max-w-7xl flex flex-col md:flex-row justify-between items-center gap-12 md:gap-24 lg:gap-48">
 {/* Right Side - Video */}
 <div className=" flex justify-center">
-                    <video 
-                        className=" w-[600px] h-[600px] rounded-3xl object-cover"
-                        autoPlay
-                        loop
-                        muted
-                        src="/5.mp4" 
-                        poster="vid"
-                    >
-                        Your browser does not support the video tag.
-                    </video>
+<video 
+  className="w-[600px] h-[600px] rounded-3xl object-cover"
+  autoPlay
+  loop
+  muted
+  controls={false} // Disable controls
+  playsInline // Ensures the video plays inline without fullscreen on mobile
+  src="/5.mp4" 
+  poster="vid"
+>
+  Your browser does not support the video tag.
+</video>
+
                 </div>
 
                 {/* Left Side - Text Elements */}

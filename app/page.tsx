@@ -24,13 +24,15 @@ export default function Home() {
     <main className="">
       <div className="relative flex flex-col items-center justify-center px-4 md:px-14 ">
         <div className="relative rounded-3xl w-full h-[600px] md:h-[670px] md:max-h-[670px] overflow-hidden">
-          <video
-            className="w-full h-full object-cover"
-            src="/6.mp4"
-            autoPlay
-            loop
-            muted
-          ></video>
+        <video
+  className="w-full h-full object-cover"
+  src="/6.mp4"
+  autoPlay
+  loop
+  muted
+  controls={false} // Disable controls
+  playsInline // Ensures the video plays inline without fullscreen on mobile
+></video>
           <div className="absolute inset-0"></div>
         </div>
 
