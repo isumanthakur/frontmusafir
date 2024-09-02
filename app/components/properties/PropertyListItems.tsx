@@ -20,8 +20,8 @@ const PropertyListItems: React.FC<PropertyProps> = ({
             onClick={() => router.push(`/properties/${property.id}`)}
         >
             <div className="relative overflow-hidden rounded-xl md:w-72 w-60 h-60 md:h-72">
-                <Image
-                    fill
+                <img
+                    
                     src={property.image_url}
                     sizes="(max-width: 768px) 768px, (max-width: 1200px): 768px, 768px"
                     className="hover:scale-105 opacity-90 object-cover transition h-full w-full"

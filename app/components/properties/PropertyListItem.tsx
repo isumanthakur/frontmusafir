@@ -15,7 +15,6 @@ const PropertyListItem: React.FC<PropertyProps> = ({
     const router = useRouter();
 
     // Log the original image_url from the property object
-    console.log('Original image_url:', property.image_url);
 
     // Ensure the image URL is correctly formatted
     const imageUrl = property.image_url && typeof property.image_url === 'string'
@@ -25,7 +24,6 @@ const PropertyListItem: React.FC<PropertyProps> = ({
         : '/path/to/placeholder-image.jpg'; // Fallback to a placeholder image if `image_url` is invalid
 
     // Log the final imageUrl being passed to the Image component
-    console.log('Final imageUrl:', imageUrl);
 
     return (
         <div

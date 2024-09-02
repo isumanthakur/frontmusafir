@@ -13,7 +13,7 @@ import AddPropertyButton from './AddPropertyButton';
 const Navbar = async () => {
     const userId = await getUserId();
 
-    console.log('userId:', userId);
+   
 
     return (
         <nav className="w-full h-16 pl-0 md:pl-24 pt-2 md:pr-24 pr:0 top-0 left-0 bg-transparent z-10">

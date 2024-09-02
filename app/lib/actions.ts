@@ -2,10 +2,10 @@
 import { cookies } from 'next/headers';
 
 export async function handleRefresh() {
-    console.log('handleRefresh');
+    
 
     const refreshToken = await getRefreshToken();
-    console.log('Current Refresh Token:', refreshToken);
+    
 
     const token = await fetch('http://localhost:8000/api/auth/token/refresh/', {
         method: 'POST',
@@ -19,10 +19,10 @@ export async function handleRefresh() {
     })
         .then(response => response.json())
         .then((json) => {
-            console.log('Response - Refresh:', json);
+            
 
             if (json.access) {
-                console.log('New Access Token:', json.access);
+                
                 cookies().set('session_access_token', json.access, {
                     httpOnly: true,
                     secure: false,
@@ -32,12 +32,12 @@ export async function handleRefresh() {
 
                 return json.access;
             } else {
-                console.log('Failed to Refresh Token');
+                
                 resetAuthCookies();
             }
         })
         .catch((error) => {
-            console.log('Error during token refresh:', error);
+            
 
             resetAuthCookies();
         });
@@ -46,9 +46,7 @@ export async function handleRefresh() {
 }
 
 export async function handleLogin(userId: string, accessToken: string, refreshToken: string) {
-    console.log('Login - UserId:', userId);
-    console.log('Login - Access Token:', accessToken);
-    console.log('Login - Refresh Token:', refreshToken);
+    
 
     cookies().set('session_userid', userId, {
         httpOnly: true,
@@ -73,7 +71,7 @@ export async function handleLogin(userId: string, accessToken: string, refreshTo
 }
 
 export async function resetAuthCookies() {
-    console.log('Resetting Auth Cookies');
+    
     cookies().set('session_userid', '');
     cookies().set('session_access_token', '');
     cookies().set('session_refresh_token', '');
@@ -84,16 +82,16 @@ export async function resetAuthCookies() {
 
 export async function getUserId() {
     const userId = cookies().get('session_userid')?.value;
-    console.log('Current UserId:', userId);
+    
     return userId ? userId : null;
 }
 
 export async function getAccessToken() {
     let accessToken = cookies().get('session_access_token')?.value;
-    console.log('Current Access Token:', accessToken);
+    
 
     if (!accessToken) {
-        console.log('Access Token expired or missing, attempting to refresh...');
+        
         accessToken = await handleRefresh();
     }
 
@@ -102,7 +100,7 @@ export async function getAccessToken() {
 
 export async function getRefreshToken() {
     let refreshToken = cookies().get('session_refresh_token')?.value;
-    console.log('Current Refresh Token:', refreshToken);
+    
 
     return refreshToken;
 }

@@ -37,7 +37,7 @@ const SearchModal = () => {
             bathrooms: parseInt(numBathrooms),
             category: ''
         }
-        console.log('Search Query:', newSearchQuery); // Debugging
+        
 
         searchModal.setQuery(newSearchQuery);
         searchModal.close();
