@@ -63,6 +63,7 @@ const PropertyList: React.FC<PropertyListProps> = ({
         try {
             const response = await apiService.get(url);
             const tmpProperties = response.data;
+            console.log('Properties:', tmpProperties);
 
             setProperties(tmpProperties.map((property: PropertyType) => ({
                 ...property,
