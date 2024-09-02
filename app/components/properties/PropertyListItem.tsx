@@ -13,6 +13,11 @@ const PropertyListItem: React.FC<PropertyProps> = ({
     markFavorite,
 }) => {
     const router = useRouter();
+    
+    // Prepend the base URL if the image_url is a relative path
+    const imageUrl = property.image_url.startsWith('http')
+        ? property.image_url
+        : `${process.env.NEXT_PUBLIC_API_HOST}${property.image_url}`;
 
     return (
         <div
@@ -22,7 +27,7 @@ const PropertyListItem: React.FC<PropertyProps> = ({
             <div className="relative overflow-hidden rounded-xl w-52 h-52">
                 <Image
                     fill
-                    src={property.image_url}
+                    src={imageUrl}  // Use the corrected image URL
                     sizes="(max-width: 768px) 768px, (max-width: 1200px): 768px, 768px"
                     className="hover:scale-105 opacity-90 object-cover transition h-full w-full"
                     alt="Property image"
@@ -37,7 +42,7 @@ const PropertyListItem: React.FC<PropertyProps> = ({
                 )}
             </div>
 
-            <div className="mt-2 text-center w-52 "> 
+            <div className="mt-2 text-center w-52"> 
                 <p className="text-lg font-sans text-neutral-600 font-semibold">{property.title}</p>
             </div>
 
